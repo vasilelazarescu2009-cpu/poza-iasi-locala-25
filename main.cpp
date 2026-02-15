@@ -11,38 +11,37 @@ int main()
 
     int C, n;
     in >> C >> n;
-    vector<int> r1(n);
-    vector<int> r2(n);
-    vector<int> r3(n);
-    for(int &i : r1)
-        in >> i;
-    for(int &i : r2)
-        in >> i;
-    for(int &i : r3)
-        in >> i;
+    int A[3][n];
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < n; j++){
+            in >> A[i][j];
+        }
+    }
     if(C == 1){
-        int Max = 0, Min = INT_MAX;
-        //cout << Min;
-        for(int i : r1){
-            if(i > Max)
-                Max = i;
-            if(i < Min)
-                Min = i;
-        }
-        for(int i : r2){
-            if(i > Max)
-                Max = i;
-            if(i < Min)
-                Min = i;
-        }
-        for(int i : r3){
-            if(i > Max)
-                Max = i;
-            if(i < Min)
-                Min = i;
+        int Min = INT_MAX, Max = 0;
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < n; j++){
+                if(A[i][j] > Max)
+                    Max = A[i][j];
+                if(A[i][j] < Min)
+                    Min = A[i][j];
+            }
         }
         out << Max << " " << Min;
+        return 0;
 
+    }
+    if(C == 2){
+        int B[3][n];
+        int Min = INT_MAX;
+        int count = 0;
+        int row = 0;
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < n; j++)
+                if(A[i][j] < Min)
+                    Min = A[i][j];
+
+        }
     }
 
     return 0;
