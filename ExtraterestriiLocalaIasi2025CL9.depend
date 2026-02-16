@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1771268964 source:c:\users\vasile\desktop\problemetypeshi\extraterestriilocalaiasi2025cl9\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+
