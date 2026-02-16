@@ -19,12 +19,16 @@ void sortare(int n, int x[])
 void afisare(int n, int x[])
 {
     int i, j = 0, a = n/3;
-    for(i=0;i<n;i++){
+    for(i=n/3*2;i<n;i++)
         out<<x[i]<<" ";
-        j++;
-        if(j%a == 0)
-            out << endl;
-    }
+    out << endl;
+    for(i=n/3;i<n/3*2;i++)
+        out<<x[i]<<" ";
+
+    out << endl;
+    for(i=0;i<n/3;i++)
+        out<<x[i]<<" ";
+
 }
 //adaugari autor
 int main()
