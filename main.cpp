@@ -1,20 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <algorithm>\
+
 
 using namespace std;
 ofstream out("poza.out");
 ifstream in("poza.in");
 //adaugari erhan
-void sortare(int n, int x[])
-{
-    int i,j;
-    for(i=0;i<n-1;i++)
-        for(j=i+1;j<n;j++)
-            if(x[i]<x[j])
-                swap(x[i],x[j]);
-
-}
 
 void afisare(int n, int x[])
 {
@@ -37,8 +30,7 @@ int main()
     sortare(n,x);
     afisare(n,x);*/
 
-    ifstream in("poza.in");
-    ofstream out("poza.out");
+
 
     int C, n;
     in >> C >> n;
@@ -58,7 +50,7 @@ int main()
         return 0;
     }
     if(C==2){
-        sortare(a, A.data());
+        sort(A.begin(), A.end(), greater<int>());
         afisare(a, A.data());
     }
 
