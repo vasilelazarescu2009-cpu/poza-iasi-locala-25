@@ -18,16 +18,20 @@ void sortare(int n, int x[])
 
 void afisare(int n, int x[])
 {
-    int i;
-    for(i=0;i<n;i++)
+    int i, j = 0, a = n/3;
+    for(i=0;i<n;i++){
         out<<x[i]<<" ";
+        j++;
+        if(j%a == 0)
+            out << endl;
+    }
 }
 //adaugari autor
 int main()
 {
-    int n=6,x[]={1,2,100,3,4,5};
+    /*int n=6,x[]={1,2,100,3,4,5};
     sortare(n,x);
-    afisare(n,x);
+    afisare(n,x);*/
 
     ifstream in("poza.in");
     ofstream out("poza.out");
@@ -50,7 +54,8 @@ int main()
         return 0;
     }
     if(C==2){
-        sortare()
+        sortare(a, A.data());
+        afisare(a, A.data());
     }
 
 
