@@ -3,9 +3,30 @@
 #include <vector>
 
 using namespace std;
+ofstream out("poza.out");
 
+void sortare(int n, int x[])
+{
+    int i,j;
+    for(i=0;i<n-1;i++)
+        for(j=i+1;j<n;j++)
+            if(x[i]<x[j])
+                swap(x[i],x[j]);
+
+}
+
+void afisare(int n, int x[])
+{
+    int i;
+    for(i=0;i<n;i++)
+        out<<x[i]<<" ";
+}
 int main()
 {
+    int n=6,x[]={1,2,100,3,4,5};
+    sortare(n,x);
+    afisare(n,x);
+    /*
     ifstream in("poza.in");
     ofstream out("poza.out");
 
@@ -73,6 +94,6 @@ int main()
         }
     }
 
-
+*/
     return 0;
 }
